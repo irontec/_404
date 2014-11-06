@@ -1,0 +1,90 @@
+@CHARSET "UTF-8";
+
+body {
+	font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	letter-spacing: .035em;
+	font-size: 13px;
+	height:100%;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+    background: url(../images/bg-somos.png) 50% 50% no-repeat;
+    background-size: cover;
+    background-color: #000;
+    color: #fff;
+}
+.trama {
+    background: url(../images/trama-black.png) repeat scroll 0 0;	
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.header h1 {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.header p {
+	font-size: 1.2em;
+}
+
+img {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+#monitor {
+	overflow: hidden;
+    font-size: 11pt;
+    line-height: 15pt;
+    border-radius: 4px;
+    display: block;
+    background: rgba(0,0,0,0.8);
+    border: 1px solid #888;
+    color: #bbb;
+    padding: 10px;
+    font-family: monospace;
+    height: 600px;
+    max-width: 800px;
+}
+#title {
+	min-height: 20px;
+	margin-bottom: 10px;
+}
+#image {
+    margin-bottom: 10px;
+    height: auto;
+}
+#console {
+	overflow: hidden;
+}
+#console .message {
+	color: #fff;
+}
+#console .message.salute {
+	margin-left: 10px;
+	margin-right: 10px;
+    font-style: italic;
+}
+#console .message.salute:before { 
+    content: " - ";
+}
+#console .cursor:before {
+	content: ">";
+}
+#console .cursor {
+	margin-right: 10px;
+}
+#console .command {
+	width: 90%;
+	background: transparent;
+	color: #fff;
+	border: 0;
+}
+#console input:focus {
+    outline-width: 0;
+}

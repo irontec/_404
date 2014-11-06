@@ -1,0 +1,64 @@
+config:
+  actions:
+    look:
+      command: mirar
+      help: "Con el comando 'mirar', te muestra una descripción del lugar en el que estás"
+    examine:
+      command: examinar
+      help: "Puedes 'examinar' objetos o personas que haya en el lugar mediante 'examinar objeto/persona'. Normalmente, se indica en la descripción del lugar todo lo que hay, pero puede haber objetos ocultos ;)"
+    help:
+      command: ayuda
+    salute:
+      command: saludar
+      help: "Es de buena educación saludar a las personas, que puedes hacer mediante 'saludar persona'"
+  paths:
+    south: sur
+    north: norte
+    east: este
+    west: oeste
+    up: subir
+    down: bajar
+    start: empezar
+  phrases:
+    help:
+      actions: "Puedes realizar las siguientes acciones<br />%actions%.<br />También puedes ver ayuda sobre un determinado comando con 'ayuda comando'"
+      paths: "Te puedes mover usando los siguientes comandos<br />%paths%"
+    examine: "¿Examinar el qué? ¿%object%? No sé a qué te refieres."
+    salute:
+      hello: "¡Hola %object%!"
+      empty: "...%object% no responde nada. Parece que no te hace mucho caso..."
+      nobody: "¿Quién es %object%? ¿Tu amigo imaginario? :)"
+    unknown: "No entiendo lo que quieres decir..."
+    badpath: "No puedes ir en esa direccion: %path%. Las únicas direcciones posibles son: %paths%."
+  firstmap: start
+map:
+#START
+  start:
+    title: Comienzo
+    description: "Si necesitas ayuda, escribe 'ayuda' :) <br />Si quieres empezar, escribe 'empezar' ;)"
+    paths:
+      start: one
+#MAP ONE
+  one:
+    title: Pantalla uno
+    image: one.jpg
+    description: Estás en la pantalla uno. Aquí está John y hay una pared. Puedes ir al sur.
+    paths:
+      south: two
+    people:
+      john:
+        description: Este es John
+        hello: Hola. Te respondo cuando me saludas.
+    items:
+      pared:
+        description: Esto es una pared
+#MAP TWO
+  two:
+    title: Pantalla dos
+    description: Estás en la pantalla dos. Aquí no hay imagen. Está Irune y no hay nada más. Puedes ir al norte.
+    paths:
+      north: one
+    people:
+      irune:
+        description: Esta es Irune
+        #No te respondo porque no tengo el parámetro 'hello'
